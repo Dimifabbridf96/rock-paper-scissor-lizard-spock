@@ -1,7 +1,7 @@
 let userScore = 0;
 let computerScore = 0;
 let leaderboard = document.getElementsByClassName('left');
-let rules = document.getElementsByClassName('right');
+let rules = document.getElementsById('right');
 let score = document.getElementById('scoreboard');
 let uScore = parseInt(document.getElementById('u-score').innerHTML);
 
@@ -17,6 +17,8 @@ let spock = document.getElementById('spock');
 document.addEventListener("DOMContentLoaded", game());
 
 function game(){
+    rules.addEventListener('onmouseover', mouseover);
+    rules.addEventListener('onmouseout', mouveout);
  let buttons = document.getElementsByTagName('button');
  let userChoice;
  let computer;
@@ -97,7 +99,7 @@ document.getElementById('u-score').innerHTML= ++uScore}
                                                     } 
 /* if user use spock */
                                                             if(userChoice === 'Spock' && computer === 'Scissor'){
-                                                                reault.innerHTML=(`${userChoice} smashes ${computer}`);
+                                                                result.innerHTML=(`${userChoice} smashes ${computer}`);
                                                                 document.getElementById('u-score').innerHTML= ++uScore
                                                                 
                                                                     } else if(userChoice === 'Spock'  && computer === 'Rock'  ){
@@ -147,15 +149,19 @@ document.getElementById('u-score').innerHTML= ++uScore}
                                                                     if(userChoice === computer){
                                                                         result.innerHTML=(`${userChoice} and ${computer} is a tie`)
                                                                     }
-                                                                }} ;                                                             
-                  /* function addPointsUser(){
-                            let uScore = parseInt(document.getElementById('u-score').innerHTML);
-                            document.getElementById('u-score').innerHTML= ++uScore}; 
-                              function addPointsComp(){
-                            let cScore = parseInt(document.getElementById('c-score').innerHTML);
-                            document.getElementById('c-score').innerHTML= ++cScore};    };*/
-                        
-          
+                                                                }
+                                                            
+                                                            };
+
+                                                            function mouseover(){
+                                                                document.getElementById("imgrules").style.display = 'block';
+                                                            }
+                                                            function mouveout(){
+                                                                document.getElementById('imgrules').style.display = 'none';
+                                                            }
+                                                                                                        
+
+
 
                      
 
