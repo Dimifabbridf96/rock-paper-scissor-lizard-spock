@@ -54,7 +54,7 @@ font-size: 1rem;
     padding: 15px;
     border-radius: 10px;
 }
-.u-score{
+#u-score{
     position: absolute;
     font-size: 2rem;
     top: 10px;
@@ -62,7 +62,7 @@ font-size: 1rem;
    color: green;
  
 }
-.c-score{
+#c-score{
     position: absolute;
     font-size: 2rem;
     top: 10px;
@@ -71,6 +71,12 @@ font-size: 1rem;
 }
 .result{
     padding: 30px;
+}
+p.result{ 
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+
 }
 .buttons{
     display: flex;
