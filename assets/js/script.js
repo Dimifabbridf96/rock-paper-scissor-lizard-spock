@@ -17,33 +17,33 @@ let tr = document.getElementById('buttons');
 let inputs = document.getElementsByTagName('input');
 let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
-
+let timeout = setTimeout(rounds(), 3000);
+function rounds(){
+ game();}
 localStorage.setItem('fname', 'fname.value');
 localStorage.setItem('lname', 'lname.value');
 
-document.addEventListener("DOMContentLoaded", pregame());
+document.addEventListener("DOMContentLoaded", game);
 
-function pregame(){
+/*function pre(){
 score.style.display = 'none';
 result.style.display = 'none';
 tr.style.display = 'none'; 
-}
 
+}
 for(let input of inputs){
     input.addEventListener('click', function(){
         if(this.getAttribute('type') === 'submit'){
 score.style.display = 'block';
 result.style.display = 'block';
 tr.style.display = 'block'; 
+form.style.display = 'none';
+       }
 
-}else{
-            pregame();
-        }
-
-})
-};
+    }
+     ) }*/
     
-
+ 
 
                                                             
    rules.onmouseover = function(){
@@ -85,8 +85,7 @@ function game(){
                      checkWinner();
                      checkLoser();
                      checkTie();
-                   /*  mouseover();
-                     mouveout(); */
+                     rounds();
 
 
 
@@ -188,7 +187,9 @@ document.getElementById('u-score').innerHTML= ++uScore}
                                                                     }
                                                                 }
                                                             
-                                                            };
+                                                             
+                                                             };
+                                                            
 
                                                                                                         
 

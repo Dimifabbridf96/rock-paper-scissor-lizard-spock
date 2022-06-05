@@ -54,7 +54,7 @@ font-size: 1rem;
 }
 .label-right{
     position: absolute;
-    right: -130px;
+    right: -144px;
     bottom: -10px;
     border: 2px solid red;
     padding: 15px;
@@ -84,7 +84,7 @@ p.result{
     color: red;
 
 }
-.buttons{
+#buttons{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,6 +92,7 @@ p.result{
     gap: 30px ;
     margin-top: 50px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 .choice{
     border: 2px solid black;
