@@ -17,13 +17,17 @@ let tr = document.getElementById('buttons');
 let inputs = document.getElementsByTagName('input');
 let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
-let timeout = setTimeout(rounds(), 3000);
-function rounds(){
- game();}
+
 localStorage.setItem('fname', 'fname.value');
 localStorage.setItem('lname', 'lname.value');
 
-document.addEventListener("DOMContentLoaded", game);
+document.addEventListener("DOMContentLoaded", game());
+
+scissor.disabled = true;
+setTimeout(() => {
+    scissor.disabled = false;
+    console.log('scissor works')},3000);
+    
 
 /*function pre(){
 score.style.display = 'none';
@@ -79,13 +83,15 @@ function game(){
                                 userChoice = this.getAttribute('data-type');
                                 computer = computerChoice();
                             }
+                            if(button.getAttribute('data-type') === disabled){
+                                this.getAttribute('id').style.opacity = 0.5;
+                            }
               console.log(userChoice);
               console.log(computer);
                      
                      checkWinner();
                      checkLoser();
                      checkTie();
-                     rounds();
 
 
 
