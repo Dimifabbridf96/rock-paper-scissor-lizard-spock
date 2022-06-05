@@ -40,7 +40,7 @@ tr.style.display = 'block';
             pregame();
         }
 
-}
+})
 };
     
 
