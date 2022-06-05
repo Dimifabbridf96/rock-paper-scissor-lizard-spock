@@ -1,24 +1,59 @@
 let userScore = 0;
 let computerScore = 0;
 let leaderboard = document.getElementsByClassName('left');
-let rules = document.getElementsById('right');
+let rules = document.getElementById('right');
+let img = document.getElementById('imgrules');
 let score = document.getElementById('scoreboard');
 let uScore = parseInt(document.getElementById('u-score').innerHTML);
-
 let cScore = parseInt(document.getElementById('c-score').innerHTML);
 let result = document.querySelector('.result ');
-
 let rock = document.getElementById('rock');
 let scissor = document.getElementById('scissor');
 let paper = document.getElementById('paper');
 let lizard = document.getElementById('lizard');
 let spock = document.getElementById('spock');
+let form = document.getElementById('form');
+let tr = document.getElementById('buttons');
+let inputs = document.getElementsByTagName('input');
+let fname = document.getElementById('fname');
+let lname = document.getElementById('lname');
 
-document.addEventListener("DOMContentLoaded", game());
+localStorage.setItem('fname', 'fname.value');
+localStorage.setItem('lname', 'lname.value');
 
+document.addEventListener("DOMContentLoaded", pregame());
+
+function pregame(){
+score.style.display = 'none';
+result.style.display = 'none';
+tr.style.display = 'none'; 
+}
+
+for(let input of inputs){
+    input.addEventListener('click', function(){
+        if(this.getAttribute('type') === 'submit'){
+score.style.display = 'block';
+result.style.display = 'block';
+tr.style.display = 'block'; 
+
+}else{
+            pregame();
+        }
+
+}
+};
+    
+
+
+                                                            
+   rules.onmouseover = function(){
+         img.style.display = 'block';}
+                                                        
+                                                            
+         rules.onmouseout = function(){
+             img.style.display = 'none';}
+                                                        
 function game(){
-    rules.addEventListener('onmouseover', mouseover);
-    rules.addEventListener('onmouseout', mouveout);
  let buttons = document.getElementsByTagName('button');
  let userChoice;
  let computer;
@@ -50,6 +85,8 @@ function game(){
                      checkWinner();
                      checkLoser();
                      checkTie();
+                   /*  mouseover();
+                     mouveout(); */
 
 
 
@@ -153,12 +190,6 @@ document.getElementById('u-score').innerHTML= ++uScore}
                                                             
                                                             };
 
-                                                            function mouseover(){
-                                                                document.getElementById("imgrules").style.display = 'block';
-                                                            }
-                                                            function mouveout(){
-                                                                document.getElementById('imgrules').style.display = 'none';
-                                                            }
                                                                                                         
 
 
