@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Press+Start+2P&display=swap');
 body{
     background-color: #EEEEEE;
 }
@@ -6,6 +7,10 @@ body{
     display: flex;
     justify-content: center;
     margin: 0 auto;
+
+}
+h1{
+    font-family: 'Press Start 2P', cursive, sans-serif;
 }
 
 #banner{
@@ -19,6 +24,7 @@ left: 2rem;
 bottom: 20px;
 padding: 10px;
 font-size: 1rem;
+font-family: 'Inconsolata', monospace;;
 }
 #right{
     position: absolute;
@@ -26,6 +32,7 @@ font-size: 1rem;
     bottom: 20px;
     padding: 10px;
     font-size: 1rem;
+    font-family: 'Inconsolata', monospace;
 }
 #imgrules{
     display: none;
@@ -81,7 +88,9 @@ font-size: 1rem;
 p.result{ 
     text-align: center;
     font-size: 2rem;
-    color: red;
+    color: gray;
+    text-shadow: 2px 2px black ;
+    font-family: 'Inconsolata', monospace;
 
 }
 #buttons{
@@ -105,12 +114,18 @@ p.result{
     box-shadow: 10px 5px black;
   transform: translateY(-0.5rem);
 }
+#show{
+    height: 200px;
+    width: 500px;
+    margin: 10px auto;
+}
  #form{
    text-align: center;
    border: 2px solid green;
    width: 50%;
    margin: 0 auto;
    padding: 40px;
+   font-family: 'Inconsolata', monospace;
 
  }
  .input{

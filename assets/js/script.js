@@ -2,7 +2,7 @@ let userScore = 0;
 let computerScore = 0;
 let leaderboard = document.getElementsByClassName('left');
 let rules = document.getElementById('right');
-let img = document.getElementById('imgrules');
+let img1 = document.getElementById('imgrules');
 let score = document.getElementById('scoreboard');
 let uScore = parseInt(document.getElementById('u-score').innerHTML);
 let cScore = parseInt(document.getElementById('c-score').innerHTML);
@@ -55,11 +55,11 @@ form.style.display = 'none';
 
                                                             
    rules.onmouseover = function(){
-         img.style.display = 'block';}
+         img1.style.display = 'block';}
                                                         
                                                             
          rules.onmouseout = function(){
-             img.style.display = 'none';}
+             img1.style.display = 'none';}
                                                         
 function game(){
  let buttons = document.getElementsByTagName('button');
@@ -127,45 +127,45 @@ function checkWinner(){
    
    /* check if user use rock*/
         if(userChoice === 'Rock' && computer === 'Scissor'){
-result.innerHTML=(`${userChoice} crushes ${computer}`);
+result.innerHTML=(`${userChoice} crushes ${computer} 😁`);
 document.getElementById('u-score').innerHTML= ++uScore}
     else if(userChoice === 'Rock'  && computer === 'Lizard'  ){
-       result.innerHTML=(`${userChoice} crushes ${computer}`);
-       document.getElementById('u-score').innerHTML= ++uScore}
+        result.innerHTML=(`${userChoice} crushes ${computer} 😁`);
+        document.getElementById('u-score').innerHTML= ++uScore}
    
 /* if user use scissor*/
             if(userChoice === 'Scissor' && computer === 'Paper'){
-                result.innerHTML=(`${userChoice} cuts ${computer}`);
+                result.innerHTML=(`${userChoice} cuts ${computer} 😁`);
                 document.getElementById('u-score').innerHTML= ++uScore}
                    else if(userChoice === 'Scissor'  && computer === 'Lizard'  ){
-                        result.innerHTML=(`${userChoice} decapitates ${computer}`);
+                        result.innerHTML=(`${userChoice} decapitates ${computer} 😁`);
                         document.getElementById('u-score').innerHTML= ++uScore
                 
                     }
 /*if user use paper*/
                             if(userChoice === 'Paper' && computer === 'Rock'){
-                               result.innerHTML=(`${userChoice} covers ${computer}`);  
+                               result.innerHTML=(`${userChoice} covers ${computer} 😁`);  
                                document.getElementById('u-score').innerHTML= ++uScore  
                                     } else if(userChoice === 'Paper'  && computer === 'Spock'  ){
-                                        result.innerHTML=(`${userChoice} disproves ${computer}`);
+                                        result.innerHTML=(`${userChoice} disproves ${computer} 😁`);
                                         document.getElementById('u-score').innerHTML= ++uScore
                                     }
 /*if user use lizard */
                                             if(userChoice === 'Lizard' && computer === 'Spock'){
-                                                result.innerHTML=(`${userChoice} poisons ${computer}`);
+                                                result.innerHTML=(`${userChoice} poisons ${computer} 😁`);
                                                 document.getElementById('u-score').innerHTML= ++uScore
                                                 
                                                     }else if(userChoice === 'Lizard'  && computer === 'Paper'  ){
-                                                        result.innerHTML=(`${userChoice} eats ${computer}`);
+                                                        result.innerHTML=(`${userChoice} eats ${computer} 😁`);
                                                         document.getElementById('u-score').innerHTML= ++uScore
                                                     } 
 /* if user use spock */
                                                             if(userChoice === 'Spock' && computer === 'Scissor'){
-                                                                result.innerHTML=(`${userChoice} smashes ${computer}`);
+                                                                result.innerHTML=(`${userChoice} smashes ${computer} 😁`);
                                                                 document.getElementById('u-score').innerHTML= ++uScore
                                                                 
                                                                     } else if(userChoice === 'Spock'  && computer === 'Rock'  ){
-                                                                        result.innerHTML=(`${userChoice} vaporizes ${computer} `); 
+                                                                        result.innerHTML=(`${userChoice} vaporizes ${computer} 😁 `); 
                                                                         document.getElementById('u-score').innerHTML= ++uScore
                                                                     } ;
                                                                        
@@ -177,39 +177,41 @@ document.getElementById('u-score').innerHTML= ++uScore}
                          
                             
                             if(userChoice === 'Rock'  && computer === 'Paper'  ){
-                            result.innerHTML =(`${computer} cover ${userChoice}`);
-                            document.getElementById('c-score').innerHTML= ++cScore}    
+                            result.innerHTML =(`${computer} cover ${userChoice} 😞`);
+                            document.getElementById('c-score').innerHTML= ++cScore;
+                        document.getElementById('show').setAttribute('style', 'background: url("assets/image/6e8bf918245f42321ba8d85e6081c17a_t.jpeg") no-repeat center center; background-size : 50% ;')} 
+
                        else if(userChoice === 'Rock'  && computer === 'Spock'  ){
-                                result.innerHTML=(`${computer} vaporizes ${userChoice}`);
+                                result.innerHTML=(`${computer} vaporizes ${userChoice} 😞`);
                                 document.getElementById('c-score').innerHTML= ++cScore}   
                                 else if(userChoice === 'Scissor'  && computer === 'Spock'){
-                                result.innerHTML=(`${computer} smashes ${userChoice}`);
+                                result.innerHTML=(`${computer} smashes ${userChoice} 😞`);
                                 document.getElementById('c-score').innerHTML= ++cScore}
                              if(userChoice === 'Scissor'  && computer === 'Rock'  ){
-                                    result.innerHTML=(`${computer} crushes ${userChoice}`);
+                                    result.innerHTML=(`${computer} crushes ${userChoice} 😞`);
                                     document.getElementById('c-score').innerHTML= ++cScore}
                                     else if(userChoice === 'Paper'  && computer === 'Scissor'){
-                                    result.innerHTML=(`${computer} cuts ${userChoice}`);
+                                    result.innerHTML=(`${computer} cuts ${userChoice} 😞`);
                                     document.getElementById('c-score').innerHTML= ++cScore}
                                  if(userChoice === 'Paper'  && computer === 'Lizard'  ){
-                                        result.innerHTML=(`${computer} eats ${userChoice}`);
+                                        result.innerHTML=(`${computer} eats ${userChoice} 😞`);
                                         document.getElementById('c-score').innerHTML= ++cScore}
                                         else if(userChoice === 'Lizard'  && computer === 'Rock'){
-                                                        result.innerHTML=(`${computer} crushes ${userChoice}`);
+                                                        result.innerHTML=(`${computer} crushes ${userChoice} 😞`);
                                                         document.getElementById('c-score').innerHTML= ++cScore}
                                                      if(userChoice === 'Lizard'  && computer === 'Scissor'  ){
-                                                            result.innerHTML=(`${computer} decapitates ${userChoice}`);
+                                                            result.innerHTML=(`${computer} decapitates ${userChoice} 😞`);
                                                             document.getElementById('c-score').innerHTML= ++cScore}
                                                             else if(userChoice === 'Spock'  && computer === 'Lizard'){
-                                                            result.innerHTML=(`${computer} poisones ${userChoice}`);
+                                                            result.innerHTML=(`${computer} poisones ${userChoice} 😞`);
                                                             document.getElementById('c-score').innerHTML= ++cScore}
                                                          if(userChoice === 'Spock'  && computer === 'Paper'  ){
-                                                                result.innerHTML=(`${computer} disproves ${userChoice} `);
+                                                                result.innerHTML=(`${computer} disproves ${userChoice} 😞 `);
                                                                 document.getElementById('c-score').innerHTML= ++cScore}}
                                                             
                                                                 function checkTie(){
                                                                     if(userChoice === computer){
-                                                                        result.innerHTML=(`${userChoice} and ${computer} is a tie`)
+                                                                        result.innerHTML=(`${userChoice} and ${computer} is a tie 😅`)
                                                                     }
                                                                 }
                                                             
