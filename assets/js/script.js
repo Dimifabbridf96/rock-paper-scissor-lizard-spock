@@ -14,6 +14,7 @@ let lizard = document.getElementById('lizard');
 let spock = document.getElementById('spock');
 let form = document.getElementById('form');
 let tr = document.getElementById('buttons');
+let choice = document.getElementsByClassName('choice');
 let inputs = document.getElementsByTagName('input');
 let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
@@ -23,10 +24,13 @@ localStorage.setItem('lname', 'lname.value');
 
 document.addEventListener("DOMContentLoaded", game());
 
-scissor.disabled = true;
-setTimeout(() => {
-    scissor.disabled = false;
-    console.log('scissor works')},3000);
+/*
+scissor.disabled = false,
+rock.disabled = false,
+paper.disabled = false,
+spock.disabled = false,
+lizard.disabled = false,*/
+
     
 
 /*function pre(){
@@ -83,19 +87,35 @@ function game(){
                                 userChoice = this.getAttribute('data-type');
                                 computer = computerChoice();
                             }
-                            if(button.getAttribute('data-type') === disabled){
+                            if(button.getAttribute('data-type').disabled === true){
                                 this.getAttribute('id').style.opacity = 0.5;
                             }
               console.log(userChoice);
               console.log(computer);
-                     
+                     rounds();
                      checkWinner();
                      checkLoser();
                      checkTie();
 
 
+function rounds(){ 
+                                                     button.addEventListener('click', function(){
+                                                         setTimeout(
+                                                            scissor.disabled = true,
+                                                            rock.disabled = true,
+                                                            paper.disabled = true,
+                                                            spock.disabled = true,
+                                                            lizard.disabled = true,
+                                                            console.log('scissor works'),50)});
 
-
+                                                        setTimeout(() => {
+                                                            scissor.removeAttribute('disabled'),
+                                                            rock.removeAttribute('disabled'),
+                                                            lizard.removeAttribute('disabled'),
+                                                            spock.removeAttribute('disabled'),
+                                                            paper.removeAttribute('disabled')
+                                                             }, 3000)}
+                                                            
               function computerChoice(){
     let choice = ['Rock','Scissor', 'Paper', 'Lizard', 'Spock'];
     let randomChoice = Math.floor(Math.random() * 5);
@@ -193,13 +213,12 @@ document.getElementById('u-score').innerHTML= ++uScore}
                                                                     }
                                                                 }
                                                             
+                                                            }
                                                              
-                                                             };
                                                             
 
                                                                                                         
 
 
 
-                     
-
+                    

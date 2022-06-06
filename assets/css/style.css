@@ -101,6 +101,10 @@ p.result{
     width: 120px;
     background-size:contain ;
 }
+.choice:hover{
+    box-shadow: 10px 5px black;
+  transform: translateY(-0.5rem);
+}
  #form{
    text-align: center;
    border: 2px solid green;
