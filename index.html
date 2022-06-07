@@ -34,11 +34,11 @@
 
 <section id="buttons">
 
-    <button class="choice" style="background-image: url(assets/image/rock.png); background-size: 80%;" id="rock" data-type="Rock"></button>
-    <button class="choice" style="background-image:url(assets/image/scissor.jpeg); background-size: 80%;"  id = "scissor" data-type="Scissor"></button>
-    <button class="choice"  style="background-image:url(assets/image/paper.jpeg);background-size: 80%;" id="paper" data-type="Paper"></button>
-    <button class = "choice" style="background-image:url(assets/image/lizard.png);background-size: 120%;" id="lizard" data-type="Lizard"></button>
-    <button class="choice"  style="background-image:url(assets/image/spock.png);background-size: 80%;" id="spock" data-type="Spock"></button>
+    <button class="choice" style="background-image: url(assets/image/rock.png); background-size: 80%;" id="rock" data-type="Rock" aria-label="rock"></button>
+    <button class="choice" style="background-image:url(assets/image/scissor.jpeg); background-size: 80%;"  id = "scissor" data-type="Scissor" aria-label="scissor"></button>
+    <button class="choice"  style="background-image:url(assets/image/paper.jpeg);background-size: 80%;" id="paper" data-type="Paper" aria-label="paper"></button>
+    <button class = "choice" style="background-image:url(assets/image/lizard.png);background-size: 120%;" id="lizard" data-type="Lizard" aria-label="lizard"></button>
+    <button class="choice"  style="background-image:url(assets/image/spock.png);background-size: 80%;" id="spock" data-type="Spock" aria-label="spock"></button>
 </section >
 <section id = "label">
 <h3 id="user">User</h3><h3 id="comp">Computer</h3>
@@ -62,8 +62,6 @@
 
 <input type="text" id="lname" class="input" name="last_name">
 
-<label for="user">New User</label>
-<input type="text" id="user" class="input" name="user">
 <input type="submit" value="Bazinga !!" class="join" onclick="newUser()">
 
 

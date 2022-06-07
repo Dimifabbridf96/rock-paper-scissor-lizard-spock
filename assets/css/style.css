@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Press+Start+2P&display=swap');
-body{
+
+body {
     background-color: #EEEEEE;
 }
-.title{
+
+.title {
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -11,49 +13,55 @@ body{
     letter-spacing: 5px;
 
 }
-h1{
+
+h1 {
     font-family: 'Press Start 2P', cursive, sans-serif;
 }
 
-#banner{
+#banner {
     position: relative;
     height: 150px;
-    background-color: #d3d9c9 ;
+    background-color: #d3d9c9;
 }
-.left{
+
+.left {
     position: absolute;
-left: 2rem; 
-bottom: 20px;
-padding: 10px;
-font-size: 1rem;
-font-family: 'Inconsolata', monospace;;
+    left: 2rem;
+    bottom: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Inconsolata', monospace;
+    ;
 }
-#right{
+
+#right {
     position: absolute;
-    right: 2rem; 
+    right: 2rem;
     bottom: 20px;
     padding: 10px;
     font-size: 1rem;
     font-family: 'Inconsolata', monospace;
 }
-#center{
-   position: absolute;
-   display: flex;
-   left: 40%;
-   justify-content: space-evenly;
-   border: 2px solid black;
-   padding: 20px;
-   width: 20%;
-   font-size: 15px;
+
+#center {
+    position: absolute;
+    display: flex;
+    left: 40%;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    padding: 20px;
+    width: 20%;
+    font-size: 15px;
 }
 
-#imgrules{
+#imgrules {
     display: none;
-  margin: 0 auto;
-   height: 300px;
-   width: 300px;
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
 }
-#scoreboard{
+
+#scoreboard {
     position: relative;
     display: flex;
     justify-content: center;
@@ -64,7 +72,8 @@ font-family: 'Inconsolata', monospace;;
     border-radius: 20px;
 
 }
-.label-left{
+
+.label-left {
     position: absolute;
     left: -85px;
     bottom: -10px;
@@ -72,7 +81,8 @@ font-family: 'Inconsolata', monospace;;
     padding: 15px;
     border-radius: 10px;
 }
-.label-right{
+
+.label-right {
     position: absolute;
     right: -90px;
     bottom: -10px;
@@ -80,170 +90,199 @@ font-family: 'Inconsolata', monospace;;
     padding: 15px;
     border-radius: 10px;
 }
-#u-score{
+
+#u-score {
     position: absolute;
     font-size: 2rem;
     top: 10px;
-   left: 30%;
-   color: green;
- 
+    left: 30%;
+    color: green;
+
 }
-#c-score{
+
+#c-score {
     position: absolute;
     font-size: 2rem;
     top: 10px;
-   right: 30%;
-   color: red;
+    right: 30%;
+    color: red;
 }
-.result{
+
+.result {
     padding: 30px;
 }
-p.result{ 
+
+p.result {
     text-align: center;
     font-size: 2rem;
     color: gray;
-    text-shadow: 2px 2px black ;
+    text-shadow: 2px 2px black;
     font-family: 'Inconsolata', monospace;
 
 }
-#buttons{
+
+#buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 30px ;
+    gap: 30px;
     margin-top: 50px;
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
-.choice{
+
+.choice {
     border: 2px solid black;
     border-radius: 50%;
     height: 120px;
     width: 120px;
     background: no-repeat center center;
 }
-.choice:hover{
+
+.choice:hover {
     box-shadow: 10px 5px black;
-  transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
 }
-#show{
+
+#show {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 20px;
 }
-#showu{
-    height: 200px;
-    width: 45%;
-    margin: 10px auto;
-   
 
-}
-#showc{
+#showu {
     height: 200px;
     width: 45%;
     margin: 10px auto;
 
+
 }
-#label{
+
+#showc {
+    height: 200px;
+    width: 45%;
+    margin: 10px auto;
+
+}
+
+#label {
     display: flex;
     flex-direction: row;
-    justify-content: space-around ;
+    justify-content: space-around;
 }
- #form{
-   text-align: center;
-   border: 2px solid green;
-   width: 50%;
-   margin: 0 auto;
-   padding: 40px;
-   font-family: 'Inconsolata', monospace;
 
- }
- .input{
-     display: block;
-     margin: 15px auto;
-    
- }
-label{
+#form {
+    text-align: center;
+    border: 2px solid green;
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: 'Inconsolata', monospace;
+
+}
+
+.input {
+    display: block;
+    margin: 15px auto;
+
+}
+
+label {
     font-size: 1.5rem;
 }
-#gameover{
+
+#gameover {
     border: 2px solid black;
     padding: 100px;
     text-align: center;
     font-size: 50px;
     display: none;
 }
-#btn{
+
+#btn {
     font-size: 50px;
 }
-@media screen and (max-width : 1353px) {
-    #banner{
-    height: 200px;
-    }
-  }
-@media screen and (max-width : 1024px) {
-  #scoreboard{
-      width: 20%;
-  }
-  #center{
-      margin-top: 30px;
-  }
-}
 
-@media screen and (max-width : 890px) {
-    .title{
-        font-size: 1.5rem;
-        padding: 15px;
-    }
-    #banner{
-        height: 170px;
-    } 
-}
-@media screen and (max-width : 1024px) {
-    #banner{
-        height: 250px;
-    }
-  }
-@media screen and (max-width : 492px) {
-    .title{
-        font-size: 1.25rem;
-        padding: 15px;
-    }
-    #banner{
-        height: 170px;
-    }
-    #scoreboard{
-        width: 30%;
-    }
-}
-@media screen and (max-width : 492px) {
-   
-    #banner{
+@media screen and (max-width : 1353px) {
+    #banner {
         height: 200px;
     }
 }
+
+@media screen and (max-width : 1024px) {
+    #scoreboard {
+        width: 20%;
+    }
+
+    #center {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width : 890px) {
+    .title {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    #banner {
+        height: 170px;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    #banner {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width : 492px) {
+    .title {
+        font-size: 1.25rem;
+        padding: 15px;
+    }
+
+    #banner {
+        height: 170px;
+    }
+
+    #scoreboard {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width : 492px) {
+
+    #banner {
+        height: 200px;
+    }
+}
+
 @media screen and (max-width : 386px) {
-    #banner{
+    #banner {
         height: 350px;
     }
-    #center{
+
+    #center {
         left: 35%;
         padding: 25px;
     }
-    #moves{
+
+    #moves {
         position: absolute;
         top: 40px;
     }
-  }
-  @media screen and (max-width : 338px) {
-   
-    #moves{
+}
+
+@media screen and (max-width : 338px) {
+
+    #moves {
         position: absolute;
         top: 60px;
         left: 34px;
 
     }
-  }
+}
