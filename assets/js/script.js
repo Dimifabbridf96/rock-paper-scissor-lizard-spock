@@ -6,6 +6,8 @@ let rules = document.getElementById('right');
 let moves = document.getElementById('moves');
 let img1 = document.getElementById('imgrules');
 let score = document.getElementById('scoreboard');
+let user = document.getElementById('u-score');
+let comp = document.getElementById('c-score')
 let uScore = parseInt(document.getElementById('u-score').innerHTML);
 let cScore = parseInt(document.getElementById('c-score').innerHTML);
 let result = document.querySelector('.result ');
@@ -21,17 +23,18 @@ let inputs = document.getElementsByTagName('input');
 let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
 let game1 = document.getElementById('game');
-
+let add = document.getElementById('add');
+let over = document.getElementById('gameover')
 
 
 
 document.addEventListener("DOMContentLoaded", game());
 
+
+
 function restart(){
-    movesLeft = 11;
-    userScore = 0;
-   computerScore = 0;
-    game1.style.display = 'block';}
+    window.location.reload();
+   }
     
 function newUser(){
     var nam = fname.value;
@@ -113,6 +116,8 @@ function moveless(){
 }
 function gameOver(){
     game1.style.display = 'none';
+over.style.display = 'block'
+  
 
 };
 
