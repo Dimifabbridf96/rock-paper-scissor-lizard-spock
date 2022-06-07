@@ -92,7 +92,17 @@ function game(){
                                 computer = computerChoice();
                                 document.getElementById('showu').setAttribute('style', 'background: url("assets/image/spock.png") no-repeat center center; background-size : 20% ;')
                             }
-                           
+                           if(computer === 'Spock'){
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/spock.png") no-repeat center center; background-size : 20% ;')
+                           } if(computer === 'Lizard'){
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/lizard.png") no-repeat center center; background-size : 20% ;')
+                           }if(computer === 'Paper'){
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/paper.jpeg") no-repeat center center; background-size : 20% ;')
+                           }if(computer === 'Rock'){
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/rock.png") no-repeat center center; background-size : 20% ;')
+                           }if(computer === 'Scissor'){
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : 20% ;')
+                           }
               console.log(userChoice);
               console.log(computer);
                      rounds();
@@ -123,6 +133,7 @@ function rounds(){
     let choice = ['Rock','Scissor', 'Paper', 'Lizard', 'Spock'];
     let randomChoice = Math.floor(Math.random() * 5);
     return choice[randomChoice]};
+  
         }
  )};
   
