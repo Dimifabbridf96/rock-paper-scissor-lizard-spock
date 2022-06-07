@@ -70,26 +70,29 @@ function game(){
          if(this.getAttribute('data-type') === "Rock"){
              userChoice = this.getAttribute('data-type');
              computer = computerChoice();
+             document.getElementById('showu').setAttribute('style', 'background: url("assets/image/rock.png") no-repeat center center; background-size : 20% ;')
          }
                else if(this.getAttribute('data-type') === "Paper"){
                     userChoice = this.getAttribute('data-type');
                     computer = computerChoice();
+                    document.getElementById('showu').setAttribute('style', 'background: url("assets/image/paper.jpeg") no-repeat center center; background-size : 20% ;')
         }
                 else if(this.getAttribute('data-type') === "Scissor"){
                         userChoice = this.getAttribute('data-type');
                         computer = computerChoice();
+                        document.getElementById('showu').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : 20% ;')
                 }
                     else if(this.getAttribute('data-type') === "Lizard"){
                             userChoice = this.getAttribute('data-type');
                             computer = computerChoice();
+                            document.getElementById('showu').setAttribute('style', 'background: url("assets/image/lizard.png") no-repeat center center; background-size : 20% ;')
                         }
                            else if(this.getAttribute('data-type') === "Spock"){
                                 userChoice = this.getAttribute('data-type');
                                 computer = computerChoice();
+                                document.getElementById('showu').setAttribute('style', 'background: url("assets/image/spock.png") no-repeat center center; background-size : 20% ;')
                             }
-                            if(button.getAttribute('data-type').disabled === true){
-                                this.getAttribute('id').style.opacity = 0.5;
-                            }
+                           
               console.log(userChoice);
               console.log(computer);
                      rounds();
@@ -179,7 +182,7 @@ document.getElementById('u-score').innerHTML= ++uScore}
                             if(userChoice === 'Rock'  && computer === 'Paper'  ){
                             result.innerHTML =(`${computer} cover ${userChoice} 😞`);
                             document.getElementById('c-score').innerHTML= ++cScore;
-                        document.getElementById('show').setAttribute('style', 'background: url("assets/image/6e8bf918245f42321ba8d85e6081c17a_t.jpeg") no-repeat center center; background-size : 50% ;')} 
+                        } 
 
                        else if(userChoice === 'Rock'  && computer === 'Spock'  ){
                                 result.innerHTML=(`${computer} vaporizes ${userChoice} 😞`);

@@ -110,16 +110,36 @@ p.result{
     border-radius: 50%;
     height: 120px;
     width: 120px;
-    background-size:contain ;
+    background: no-repeat center center;
 }
 .choice:hover{
     box-shadow: 10px 5px black;
   transform: translateY(-0.5rem);
 }
 #show{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+#showu{
     height: 200px;
-    width: 100%;
+    width: 45%;
     margin: 10px auto;
+   
+
+}
+#showc{
+    height: 200px;
+    width: 45%;
+    margin: 10px auto;
+
+}
+#label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
 }
  #form{
    text-align: center;
@@ -138,6 +158,7 @@ p.result{
 label{
     font-size: 1.5rem;
 }
+
 
 @media screen and (max-width : 1024px) {
   #scoreboard{
