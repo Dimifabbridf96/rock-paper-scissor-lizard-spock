@@ -169,7 +169,15 @@ p.result{
 label{
     font-size: 1.5rem;
 }
-
+#gameover{
+    border: 2px solid black;
+    padding: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+#btn{
+    font-size: 50px;
+}
 @media screen and (max-width : 1353px) {
     #banner{
     height: 200px;

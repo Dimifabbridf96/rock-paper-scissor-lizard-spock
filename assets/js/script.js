@@ -1,7 +1,9 @@
 let userScore = 0;
 let computerScore = 0;
+let movesLeft = 10; 
 let leaderboard = document.getElementsByClassName('left');
 let rules = document.getElementById('right');
+let moves = document.getElementById('moves');
 let img1 = document.getElementById('imgrules');
 let score = document.getElementById('scoreboard');
 let uScore = parseInt(document.getElementById('u-score').innerHTML);
@@ -18,8 +20,19 @@ let choice = document.getElementsByClassName('choice');
 let inputs = document.getElementsByTagName('input');
 let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
+let game1 = document.getElementById('game');
 
 
+
+
+document.addEventListener("DOMContentLoaded", game());
+
+function restart(){
+    movesLeft = 11;
+    userScore = 0;
+   computerScore = 0;
+    game1.style.display = 'block';}
+    
 function newUser(){
     var nam = fname.value;
     localStorage.setItem('name', nam)
@@ -27,40 +40,10 @@ function newUser(){
     localStorage.setItem('last', last)
 }
 function loadUser(){
-fname = localStorage.getItem('name');
+fname = localStorage.getItem('nam');
 lname = localStorage.getItem('last');
 document.getElementById('user').value = nam + last;
 }
-
-
-document.addEventListener("DOMContentLoaded", game());
-
-/*
-scissor.disabled = false,
-rock.disabled = false,
-paper.disabled = false,
-spock.disabled = false,
-lizard.disabled = false,*/
-
-    
-
-/*function pre(){
-score.style.display = 'none';
-result.style.display = 'none';
-tr.style.display = 'none'; 
-
-}
-for(let input of inputs){
-    input.addEventListener('click', function(){
-        if(this.getAttribute('type') === 'submit'){
-score.style.display = 'block';
-result.style.display = 'block';
-tr.style.display = 'block'; 
-form.style.display = 'none';
-       }
-
-    }
-     ) }*/
     
  
 
@@ -113,13 +96,25 @@ function game(){
                             document.getElementById('showc').setAttribute('style', 'background: url("assets/image/rock.png") no-repeat center center; background-size :contain ;')
                            }if(computer === 'Scissor'){
                             document.getElementById('showc').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : contain ;')
-                           }
+                           } moveless();
               console.log(userChoice);
               console.log(computer);
                      rounds();
                      checkWinner();
                      checkLoser();
                      checkTie();
+                    
+
+function moveless(){
+    document.getElementById('moves').innerHTML= --movesLeft;
+    if(movesLeft === 0){
+        gameOver();
+    }
+}
+function gameOver(){
+    game1.style.display = 'none';
+
+};
 
 
 function rounds(){ 

@@ -14,15 +14,17 @@
         Rock, Paper, Scissor, Lizard, Spock
     </h1>
     <button class="left" onclick="loadUser()">Leaderboard</button>
-    <button id="right" >Rules </button>
+    <h2 id="right" >Rules </h2>
     <p id="center">Moves left  <span id="moves">  10</span></p>
     </header>
+   
   <section id="scoreboard">
       <p class="label-left ">
           USER 
       </p><span id="u-score">0 </span> <span id="c-score">0</span>
       <p class="label-right ">COMP </p>
-  </section>
+  </section> 
+  <section id="game" >
 <div>
 <p class="result"></p>
 </div>
@@ -66,8 +68,17 @@
 
 
 </form>
-
 </section>
+</section>
+
+<div id="gameover">
+    <h4>
+        Game Over 🎮
+     </h4>
+     <button id="btn" onclick="restart()">
+         Restart ✌
+     </button>
+</div>
 <script src="assets/js/script.js"></script>
 <script src="https://kit.fontawesome.com/1ee7458bb3.js" crossorigin="anonymous"></script> 
 </body>
