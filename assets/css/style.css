@@ -36,6 +36,17 @@ font-family: 'Inconsolata', monospace;;
     font-size: 1rem;
     font-family: 'Inconsolata', monospace;
 }
+#center{
+   position: absolute;
+   display: flex;
+   left: 40%;
+   justify-content: space-evenly;
+   border: 2px solid black;
+   padding: 20px;
+   width: 20%;
+   font-size: 15px;
+}
+
 #imgrules{
     display: none;
   margin: 0 auto;
@@ -159,10 +170,17 @@ label{
     font-size: 1.5rem;
 }
 
-
+@media screen and (max-width : 1353px) {
+    #banner{
+    height: 200px;
+    }
+  }
 @media screen and (max-width : 1024px) {
   #scoreboard{
       width: 20%;
+  }
+  #center{
+      margin-top: 30px;
   }
 }
 
@@ -173,9 +191,13 @@ label{
     }
     #banner{
         height: 170px;
-    }
-    
+    } 
 }
+@media screen and (max-width : 1024px) {
+    #banner{
+        height: 250px;
+    }
+  }
 @media screen and (max-width : 492px) {
     .title{
         font-size: 1.25rem;
@@ -194,3 +216,25 @@ label{
         height: 200px;
     }
 }
+@media screen and (max-width : 386px) {
+    #banner{
+        height: 350px;
+    }
+    #center{
+        left: 35%;
+        padding: 25px;
+    }
+    #moves{
+        position: absolute;
+        top: 40px;
+    }
+  }
+  @media screen and (max-width : 338px) {
+   
+    #moves{
+        position: absolute;
+        top: 60px;
+        left: 34px;
+
+    }
+  }

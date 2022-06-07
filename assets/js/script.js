@@ -21,15 +21,15 @@ let lname = document.getElementById('lname');
 
 
 function newUser(){
-    fname.value;
-    localStorage.setItem('name', fname)
-    lname.value;
-    localStorage.setItem('last', lname)
+    var nam = fname.value;
+    localStorage.setItem('name', nam)
+    var last = lname.value;
+    localStorage.setItem('last', last)
 }
 function loadUser(){
 fname = localStorage.getItem('name');
 lname = localStorage.getItem('last');
-document.getElementById('user').value = `${fname} + ${lname}`;
+document.getElementById('user').value = nam + last;
 }
 
 
