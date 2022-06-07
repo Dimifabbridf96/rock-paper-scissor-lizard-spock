@@ -7,6 +7,8 @@ body{
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    text-align: center;
+    letter-spacing: 5px;
 
 }
 h1{
@@ -15,7 +17,7 @@ h1{
 
 #banner{
     position: relative;
-    height: 100px;
+    height: 150px;
     background-color: #d3d9c9 ;
 }
 .left{
@@ -61,7 +63,7 @@ font-family: 'Inconsolata', monospace;;
 }
 .label-right{
     position: absolute;
-    right: -144px;
+    right: -90px;
     bottom: -10px;
     border: 2px solid red;
     padding: 15px;
@@ -116,7 +118,7 @@ p.result{
 }
 #show{
     height: 200px;
-    width: 500px;
+    width: 100%;
     margin: 10px auto;
 }
  #form{
@@ -135,4 +137,39 @@ p.result{
  }
 label{
     font-size: 1.5rem;
+}
+
+@media screen and (max-width : 1024px) {
+  #scoreboard{
+      width: 20%;
+  }
+}
+
+@media screen and (max-width : 890px) {
+    .title{
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    #banner{
+        height: 170px;
+    }
+    
+}
+@media screen and (max-width : 492px) {
+    .title{
+        font-size: 1.25rem;
+        padding: 15px;
+    }
+    #banner{
+        height: 170px;
+    }
+    #scoreboard{
+        width: 30%;
+    }
+}
+@media screen and (max-width : 492px) {
+   
+    #banner{
+        height: 200px;
+    }
 }
