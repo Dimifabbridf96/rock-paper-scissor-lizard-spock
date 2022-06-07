@@ -13,7 +13,7 @@
           <h1 class ="title">
         Rock, Paper, Scissor, Lizard, Spock
     </h1>
-    <button class="left">Leaderboard</button>
+    <button class="left" onclick="loadUser()">Leaderboard</button>
     <button id="right" >Rules </button>
     </header>
   <section id="scoreboard">
@@ -56,8 +56,12 @@
 <label for="fname">First Name :</label>
 <input type="text" id="fname" class="input" name = "first_name" >
 <label for="lname">Last Name :</label>
+
 <input type="text" id="lname" class="input" name="last_name">
-<input type="submit" value="Bazinga !!" class="join">
+
+<label for="user">New User</label>
+<input type="text" id="user" class="input" name="user">
+<input type="submit" value="Bazinga !!" class="join" onclick="newUser()">
 
 
 </form>

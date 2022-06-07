@@ -19,8 +19,19 @@ let inputs = document.getElementsByTagName('input');
 let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
 
-localStorage.setItem('fname', 'fname.value');
-localStorage.setItem('lname', 'lname.value');
+
+function newUser(){
+    fname.value;
+    localStorage.setItem('name', fname)
+    lname.value;
+    localStorage.setItem('last', lname)
+}
+function loadUser(){
+fname = localStorage.getItem('name');
+lname = localStorage.getItem('last');
+document.getElementById('user').value = `${fname} + ${lname}`;
+}
+
 
 document.addEventListener("DOMContentLoaded", game());
 
@@ -70,38 +81,38 @@ function game(){
          if(this.getAttribute('data-type') === "Rock"){
              userChoice = this.getAttribute('data-type');
              computer = computerChoice();
-             document.getElementById('showu').setAttribute('style', 'background: url("assets/image/rock.png") no-repeat center center; background-size : 20% ;')
+             document.getElementById('showu').setAttribute('style', 'background: url("assets/image/rock.png") no-repeat center center; background-size : contain ;')
          }
                else if(this.getAttribute('data-type') === "Paper"){
                     userChoice = this.getAttribute('data-type');
                     computer = computerChoice();
-                    document.getElementById('showu').setAttribute('style', 'background: url("assets/image/paper.jpeg") no-repeat center center; background-size : 20% ;')
+                    document.getElementById('showu').setAttribute('style', 'background: url("assets/image/paper.jpeg") no-repeat center center; background-size : contain ;')
         }
                 else if(this.getAttribute('data-type') === "Scissor"){
                         userChoice = this.getAttribute('data-type');
                         computer = computerChoice();
-                        document.getElementById('showu').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : 20% ;')
+                        document.getElementById('showu').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : contain ;')
                 }
                     else if(this.getAttribute('data-type') === "Lizard"){
                             userChoice = this.getAttribute('data-type');
                             computer = computerChoice();
-                            document.getElementById('showu').setAttribute('style', 'background: url("assets/image/lizard.png") no-repeat center center; background-size : 20% ;')
+                            document.getElementById('showu').setAttribute('style', 'background: url("assets/image/lizard.png") no-repeat center center; background-size : contain ;')
                         }
                            else if(this.getAttribute('data-type') === "Spock"){
                                 userChoice = this.getAttribute('data-type');
                                 computer = computerChoice();
-                                document.getElementById('showu').setAttribute('style', 'background: url("assets/image/spock.png") no-repeat center center; background-size : 20% ;')
+                                document.getElementById('showu').setAttribute('style', 'background: url("assets/image/spock.png") no-repeat center center; background-size : contain ;')
                             }
                            if(computer === 'Spock'){
-                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/spock.png") no-repeat center center; background-size : 20% ;')
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/spock.png") no-repeat center center; background-size : contain ;')
                            } if(computer === 'Lizard'){
-                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/lizard.png") no-repeat center center; background-size : 20% ;')
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/lizard.png") no-repeat center center; background-size : contain;')
                            }if(computer === 'Paper'){
-                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/paper.jpeg") no-repeat center center; background-size : 20% ;')
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/paper.jpeg") no-repeat center center; background-size :contain ;')
                            }if(computer === 'Rock'){
-                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/rock.png") no-repeat center center; background-size : 20% ;')
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/rock.png") no-repeat center center; background-size :contain ;')
                            }if(computer === 'Scissor'){
-                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : 20% ;')
+                            document.getElementById('showc').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : contain ;')
                            }
               console.log(userChoice);
               console.log(computer);
