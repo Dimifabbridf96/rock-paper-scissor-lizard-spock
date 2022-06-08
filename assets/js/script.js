@@ -21,7 +21,7 @@ let lizard = document.getElementById('lizard');
 let spock = document.getElementById('spock');
 let form = document.getElementById('form');
 let tr = document.getElementById('buttons');
-let choice = document.getElementsByClassName('choice');
+let choice = document.querySelectorAll('.choice');
 let inputs = document.getElementsByTagName('input');
 let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
@@ -29,6 +29,7 @@ let game1 = document.getElementById('game');
 let add = document.getElementById('add');
 let over = document.getElementById('gameover');
 let join = document.getElementById('join');
+let finish = document.querySelector('#finish');
 
 
 
@@ -104,7 +105,15 @@ function game() {
             if (computer === 'Scissor') {
                 document.getElementById('showc').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : contain ;')
             }
-
+            if (uScore > cScore) {
+                finish.innerHTML = ` Game Over 🎮 ${fname.value} win 🎉`
+            }
+            if (cScore > uScore) {
+                finish.innerHTML = ` Game Over 🎮 computer win 😱`
+            }
+            if (cScore === uScore) {
+                finish.innerHTML = `Game Over 🎮 is a tie 😅`
+            }
             moveless();
             rounds();
             checkWinner();
@@ -128,15 +137,16 @@ function game() {
 
 
             function rounds() {
-                button.addEventListener('click', function () {
-                    setTimeout(
-                        scissor.disabled = true,
-                        rock.disabled = true,
-                        paper.disabled = true,
-                        spock.disabled = true,
-                        lizard.disabled = true,
-                        console.log('scissor works'), 50)
-                });
+                for (let button of buttons)
+                    button.addEventListener('click', function () {
+                        setTimeout(
+                            scissor.disabled = true,
+                            rock.disabled = true,
+                            lizard.disabled = true,
+                            spock.disabled = true,
+                            paper.disabled = true,
+                            3000)
+                    });
 
                 setTimeout(() => {
                     scissor.removeAttribute('disabled'),

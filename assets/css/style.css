@@ -185,9 +185,10 @@ p.result {
     text-align: center;
     border: 2px solid green;
     width: 50%;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 40px;
     font-family: 'Inconsolata', monospace;
+
 
 }
 
@@ -207,6 +208,7 @@ label {
     text-align: center;
     font-size: 50px;
     display: none;
+    margin: 50px;
 }
 
 #btn {
