@@ -118,7 +118,14 @@ p.result {
     color: gray;
     text-shadow: 2px 2px black;
     font-family: 'Inconsolata', monospace;
+}
 
+.timer {
+    text-align: center;
+    font-size: 2rem;
+    color: gray;
+    text-shadow: 2px 2px black;
+    font-family: 'Inconsolata', monospace;
 }
 
 #buttons {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel='shortcut icon' type='image/x-icon' href='favicon (1).ico' />
     <meta charset="UTF-8">
@@ -8,76 +9,86 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock, Paper, Scissor, Lizard, Spock</title>
 </head>
+
 <body>
     <header id="banner">
-          <h1 class ="title">
-        Rock, Paper, Scissor, Lizard, Spock
-    </h1>
-    <button class="left" onclick="loadUser()">Leaderboard</button>
-    <h2 id="right" >Rules </h2>
-    <p id="center">Moves left  <span id="moves">  10</span></p>
+        <h1 class="title">
+            Rock, Paper, Scissor, Lizard, Spock
+        </h1>
+        <button class="left" onclick="loadUser()">Leaderboard</button>
+        <h2 id="right">Rules </h2>
+        <p id="center">Moves left <span id="moves"> 10</span></p>
     </header>
-   <section id="game" >
-  <section id="scoreboard">
-      <p class="label-left ">
-          USER 
-      </p><span id="u-score">0 </span> <span id="c-score">0</span>
-      <p class="label-right ">COMP </p>
-  </section> 
-  
-<div>
-<p class="result"></p>
-</div>
-<div><img src="assets/image/NicePng_rock-paper-scissors-png_1113808.png" id="imgrules" alt=""></div>
+    <section id="game">
+        <section id="scoreboard">
+            <p class="label-left ">
+
+            </p><span id="u-score">0 </span> <span id="c-score">0</span>
+            <p class="label-right ">COMP </p>
+        </section>
+
+        <div>
+            <p class="result"></p>
+            <p class="timer"></p>
+        </div>
+        <div><img src="assets/image/NicePng_rock-paper-scissors-png_1113808.png" id="imgrules" alt=""></div>
 
 
 
-<section id="buttons">
+        <section id="buttons">
 
-    <button class="choice" style="background-image: url(assets/image/rock.png); background-size: 80%;" id="rock" data-type="Rock" aria-label="rock"></button>
-    <button class="choice" style="background-image:url(assets/image/scissor.jpeg); background-size: 80%;"  id = "scissor" data-type="Scissor" aria-label="scissor"></button>
-    <button class="choice"  style="background-image:url(assets/image/paper.jpeg);background-size: 80%;" id="paper" data-type="Paper" aria-label="paper"></button>
-    <button class = "choice" style="background-image:url(assets/image/lizard.png);background-size: 120%;" id="lizard" data-type="Lizard" aria-label="lizard"></button>
-    <button class="choice"  style="background-image:url(assets/image/spock.png);background-size: 80%;" id="spock" data-type="Spock" aria-label="spock"></button>
-</section >
-<section id = "label">
-<h3 id="user">User</h3><h3 id="comp">Computer</h3>
-</section>
-<section id = "show">
-    <div id="showu"></div><div id="showc"></div>
-</section>
-
-
-    
-
-
-<section id="form">
-<form action="https://dimifabbridf96.github.io/rock-paper-scissor-lizard-spock/" method="GET" id="local">
-<h2>
-    Ready to play ?? <i class="fa-solid fa-hand"></i>
-</h2>
-<label for="fname">First Name :</label>
-<input type="text" id="fname" class="input" name = "first_name" >
-<label for="lname">Last Name :</label>
-
-<input type="text" id="lname" class="input" name="last_name">
-
-<input type="submit" value="Bazinga !!" class="join" onclick="newUser()">
+            <button class="choice" style="background-image: url(assets/image/rock.png); background-size: 80%;" id="rock"
+                data-type="Rock" aria-label="rock"></button>
+            <button class="choice" style="background-image:url(assets/image/scissor.jpeg); background-size: 80%;"
+                id="scissor" data-type="Scissor" aria-label="scissor"></button>
+            <button class="choice" style="background-image:url(assets/image/paper.jpeg);background-size: 80%;"
+                id="paper" data-type="Paper" aria-label="paper"></button>
+            <button class="choice" style="background-image:url(assets/image/lizard.png);background-size: 120%;"
+                id="lizard" data-type="Lizard" aria-label="lizard"></button>
+            <button class="choice" style="background-image:url(assets/image/spock.png);background-size: 80%;" id="spock"
+                data-type="Spock" aria-label="spock"></button>
+        </section>
+        <section id="label">
+            <h3 id="user">User</h3>
+            <h3 id="comp">Computer</h3>
+        </section>
+        <section id="show">
+            <div id="showu"></div>
+            <div id="showc"></div>
+        </section>
 
 
-</form>
-</section>
-</section>
 
-<div id="gameover">
-    <h4>
-        Game Over 🎮
-     </h4>
-     <button id="btn" onclick="restart()">
-         Restart ✌
-     </button>
-</div>
-<script src="assets/js/script.js"></script>
-<script src="https://kit.fontawesome.com/1ee7458bb3.js" crossorigin="anonymous"></script> 
+
+    </section>
+    <section id="form">
+        <form action="https://8000-dimifabbrid-rockpapersc-t10aaclf03i.ws-eu47.gitpod.io/" method="GET" id="local">
+            <h2>
+                Ready to play ?? <i class="fa-solid fa-hand"></i>
+            </h2>
+            <label for="fname">First Name :</label>
+            <input type="text" id="fname" class="input" name="first_name">
+            <label for="lname">Last Name :</label>
+
+            <input type="text" id="lname" class="input" name="last_name">
+
+            <input type="submit" value="Bazinga !!" id="join" onsubmit="showGame()">
+
+
+        </form>
+    </section>
+
+
+    <div id="gameover">
+        <h4>
+            Game Over 🎮
+        </h4>
+        <button id="btn" onclick="restart()">
+            Restart ✌
+        </button>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/1ee7458bb3.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,6 +1,8 @@
 let userScore = 0;
 let computerScore = 0;
 let movesLeft = 10;
+let time = 3;
+let tim = document.querySelector('.timer');
 let leaderboard = document.getElementsByClassName('left');
 let rules = document.getElementById('right');
 let moves = document.getElementById('moves');
@@ -24,31 +26,26 @@ let fname = document.getElementById('fname');
 let lname = document.getElementById('lname');
 let game1 = document.getElementById('game');
 let add = document.getElementById('add');
-let over = document.getElementById('gameover')
+let over = document.getElementById('gameover');
+let join = document.getElementById('join');
 
 
 
 document.addEventListener("DOMContentLoaded", game());
 
+game1.style.display = 'none';
 
 
 function restart() {
     window.location.reload();
 }
 
-function newUser() {
-    var nam = fname.value;
-    localStorage.setItem('name', nam)
-    var last = lname.value;
-    localStorage.setItem('last', last)
-}
 
-function loadUser() {
-    fname = localStorage.getItem('nam');
-    lname = localStorage.getItem('last');
-    document.getElementById('user').value = nam + last;
-}
-
+join.addEventListener('click', function (event) {
+    event.preventDefault();
+    game1.style.display = 'block';
+    form.style.display = 'none';
+})
 
 
 
@@ -103,14 +100,13 @@ function game() {
             if (computer === 'Scissor') {
                 document.getElementById('showc').setAttribute('style', 'background: url("assets/image/scissor.jpeg") no-repeat center center; background-size : contain ;')
             }
+
             moveless();
-            console.log(userChoice);
-            console.log(computer);
             rounds();
             checkWinner();
             checkLoser();
             checkTie();
-
+            timer();
 
             function moveless() {
                 document.getElementById('moves').innerHTML = --movesLeft;
@@ -147,14 +143,30 @@ function game() {
                 }, 3000)
             }
 
-            function computerChoice() {
-                let choice = ['Rock', 'Scissor', 'Paper', 'Lizard', 'Spock'];
-                let randomChoice = Math.floor(Math.random() * 5);
-                return choice[randomChoice]
-            };
+
 
         })
     };
+
+    let interval = setInterval(timer, 1000);
+
+    function timer() {
+        tim.innerHTML = `Next move in ${time}`;
+        time--;
+        if (time === -1) {
+            tim.style.display = 'none';
+        }
+    }
+
+    for (let button of buttons)
+        button.addEventListener('click', function () {
+            time = 3
+            tim.style.display = 'block';
+            timer();
+        })
+
+
+
 
     function checkWinner() {
 
@@ -248,5 +260,11 @@ function game() {
             result.innerHTML = (`${userChoice} and ${computer} is a tie 😅`)
         }
     }
-
 }
+
+
+function computerChoice() {
+    let choice = ['Rock', 'Scissor', 'Paper', 'Lizard', 'Spock'];
+    let randomChoice = Math.floor(Math.random() * 5);
+    return choice[randomChoice]
+};
