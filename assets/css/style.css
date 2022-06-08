@@ -73,7 +73,7 @@ h1 {
 
 }
 
-.label-left {
+#label-left {
     position: absolute;
     left: -85px;
     bottom: -10px;

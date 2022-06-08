@@ -13,6 +13,7 @@ let comp = document.getElementById('c-score')
 let uScore = parseInt(document.getElementById('u-score').innerHTML);
 let cScore = parseInt(document.getElementById('c-score').innerHTML);
 let result = document.querySelector('.result ');
+let userName = document.querySelector('#label-left');
 let rock = document.getElementById('rock');
 let scissor = document.getElementById('scissor');
 let paper = document.getElementById('paper');
@@ -33,18 +34,21 @@ let join = document.getElementById('join');
 
 document.addEventListener("DOMContentLoaded", game());
 
+
+
 game1.style.display = 'none';
 
 
-function restart() {
-    window.location.reload();
-}
+
+
 
 
 join.addEventListener('click', function (event) {
     event.preventDefault();
     game1.style.display = 'block';
     form.style.display = 'none';
+    var x = fname.value;
+    userName.innerHTML = x;
 })
 
 
@@ -268,3 +272,7 @@ function computerChoice() {
     let randomChoice = Math.floor(Math.random() * 5);
     return choice[randomChoice]
 };
+
+function restart() {
+    window.location.reload();
+}
