@@ -152,7 +152,7 @@ function game() {
         })
     };
 
-    let interval = setInterval(timer, 1000);
+    setInterval(timer, 1000);
 
     function timer() {
         tim.innerHTML = `Next move in ${time}`;
@@ -176,46 +176,48 @@ function game() {
 
         /* check if user use rock*/
         if (userChoice === 'Rock' && computer === 'Scissor') {
-            result.innerHTML = (`${userChoice} crushes ${computer} 😁`);
-            document.getElementById('u-score').innerHTML = ++uScore
+            result.innerHTML = (`${userChoice} crushes ${computer} 😁 ${fnmae.value} win 🎉`);
+            document.getElementById('u-score').innerHTML = ++uScore;
+
+
         } else if (userChoice === 'Rock' && computer === 'Lizard') {
-            result.innerHTML = (`${userChoice} crushes ${computer} 😁`);
+            result.innerHTML = (`${userChoice} crushes ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         }
 
         /* if user use scissor*/
         if (userChoice === 'Scissor' && computer === 'Paper') {
-            result.innerHTML = (`${userChoice} cuts ${computer} 😁`);
+            result.innerHTML = (`${userChoice} cuts ${computer} 😁 ${fnmae.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         } else if (userChoice === 'Scissor' && computer === 'Lizard') {
-            result.innerHTML = (`${userChoice} decapitates ${computer} 😁`);
+            result.innerHTML = (`${userChoice} decapitates ${computer} 😁 ${fnmae.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
 
         }
         /*if user use paper*/
         if (userChoice === 'Paper' && computer === 'Rock') {
-            result.innerHTML = (`${userChoice} covers ${computer} 😁`);
+            result.innerHTML = (`${userChoice} covers ${computer} 😁 ${fnmae.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         } else if (userChoice === 'Paper' && computer === 'Spock') {
-            result.innerHTML = (`${userChoice} disproves ${computer} 😁`);
+            result.innerHTML = (`${userChoice} disproves ${computer} 😁 ${fnmae.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         }
         /*if user use lizard */
         if (userChoice === 'Lizard' && computer === 'Spock') {
-            result.innerHTML = (`${userChoice} poisons ${computer} 😁`);
+            result.innerHTML = (`${userChoice} poisons ${computer} 😁 ${fnmae.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
 
         } else if (userChoice === 'Lizard' && computer === 'Paper') {
-            result.innerHTML = (`${userChoice} eats ${computer} 😁`);
+            result.innerHTML = (`${userChoice} eats ${computer} 😁 ${fnmae.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         }
         /* if user use spock */
         if (userChoice === 'Spock' && computer === 'Scissor') {
-            result.innerHTML = (`${userChoice} smashes ${computer} 😁`);
+            result.innerHTML = (`${userChoice} smashes ${computer} 😁 ${fnmae.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
 
         } else if (userChoice === 'Spock' && computer === 'Rock') {
-            result.innerHTML = (`${userChoice} vaporizes ${computer} 😁 `);
+            result.innerHTML = (`${userChoice} vaporizes ${computer} 😁 ${fnmae.value} win 🎉 `);
             document.getElementById('u-score').innerHTML = ++uScore
         };
     };
@@ -223,45 +225,45 @@ function game() {
     function checkLoser() {
 
         if (userChoice === 'Rock' && computer === 'Paper') {
-            result.innerHTML = (`${computer} cover ${userChoice} 😞`);
+            result.innerHTML = (`${computer} cover ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
         } else if (userChoice === 'Rock' && computer === 'Spock') {
-            result.innerHTML = (`${computer} vaporizes ${userChoice} 😞`);
+            result.innerHTML = (`${computer} vaporizes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         } else if (userChoice === 'Scissor' && computer === 'Spock') {
-            result.innerHTML = (`${computer} smashes ${userChoice} 😞`);
+            result.innerHTML = (`${computer} smashes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         }
         if (userChoice === 'Scissor' && computer === 'Rock') {
-            result.innerHTML = (`${computer} crushes ${userChoice} 😞`);
+            result.innerHTML = (`${computer} crushes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         } else if (userChoice === 'Paper' && computer === 'Scissor') {
-            result.innerHTML = (`${computer} cuts ${userChoice} 😞`);
+            result.innerHTML = (`${computer} cuts ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         }
         if (userChoice === 'Paper' && computer === 'Lizard') {
-            result.innerHTML = (`${computer} eats ${userChoice} 😞`);
+            result.innerHTML = (`${computer} eats ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         } else if (userChoice === 'Lizard' && computer === 'Rock') {
-            result.innerHTML = (`${computer} crushes ${userChoice} 😞`);
+            result.innerHTML = (`${computer} crushes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         }
         if (userChoice === 'Lizard' && computer === 'Scissor') {
-            result.innerHTML = (`${computer} decapitates ${userChoice} 😞`);
+            result.innerHTML = (`${computer} decapitates ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         } else if (userChoice === 'Spock' && computer === 'Lizard') {
-            result.innerHTML = (`${computer} poisones ${userChoice} 😞`);
+            result.innerHTML = (`${computer} poisones ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore
         }
         if (userChoice === 'Spock' && computer === 'Paper') {
-            result.innerHTML = (`${computer} disproves ${userChoice} 😞 `);
+            result.innerHTML = (`${computer} disproves ${userChoice} 😞 computer win 😱 `);
             document.getElementById('c-score').innerHTML = ++cScore
         }
     }
 
     function checkTie() {
         if (userChoice === computer) {
-            result.innerHTML = (`${userChoice} and ${computer} is a tie 😅`)
+            result.innerHTML = (`${userChoice} and ${computer} is a tie 😅 `)
         }
     }
 }
