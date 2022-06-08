@@ -176,7 +176,7 @@ function game() {
 
         /* check if user use rock*/
         if (userChoice === 'Rock' && computer === 'Scissor') {
-            result.innerHTML = (`${userChoice} crushes ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} crushes ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
 
 
@@ -187,37 +187,37 @@ function game() {
 
         /* if user use scissor*/
         if (userChoice === 'Scissor' && computer === 'Paper') {
-            result.innerHTML = (`${userChoice} cuts ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} cuts ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         } else if (userChoice === 'Scissor' && computer === 'Lizard') {
-            result.innerHTML = (`${userChoice} decapitates ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} decapitates ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
 
         }
         /*if user use paper*/
         if (userChoice === 'Paper' && computer === 'Rock') {
-            result.innerHTML = (`${userChoice} covers ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} covers ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         } else if (userChoice === 'Paper' && computer === 'Spock') {
-            result.innerHTML = (`${userChoice} disproves ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} disproves ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         }
         /*if user use lizard */
         if (userChoice === 'Lizard' && computer === 'Spock') {
-            result.innerHTML = (`${userChoice} poisons ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} poisons ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
 
         } else if (userChoice === 'Lizard' && computer === 'Paper') {
-            result.innerHTML = (`${userChoice} eats ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} eats ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
         }
         /* if user use spock */
         if (userChoice === 'Spock' && computer === 'Scissor') {
-            result.innerHTML = (`${userChoice} smashes ${computer} 😁 ${fnmae.value} win 🎉`);
+            result.innerHTML = (`${userChoice} smashes ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore
 
         } else if (userChoice === 'Spock' && computer === 'Rock') {
-            result.innerHTML = (`${userChoice} vaporizes ${computer} 😁 ${fnmae.value} win 🎉 `);
+            result.innerHTML = (`${userChoice} vaporizes ${computer} 😁 ${fname.value} win 🎉 `);
             document.getElementById('u-score').innerHTML = ++uScore
         };
     };
