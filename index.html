@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel='shortcut icon' type='image/x-icon' href='favicon (1).ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,12 @@
         <h2 id="right">Rules </h2>
         <p id="center">Moves left <span id="moves"> 10</span></p>
     </header>
-    <section id="game">
-        <section id="scoreboard">
+    <div id="game">
+        <div id="scoreboard">
             <p id="label-left"> </p><span id="u-score">0 </span>
             <span id="c-score">0</span>
             <p class="label-right ">COMP </p>
-        </section>
+        </div>
 
         <div>
             <p class="result"></p>
@@ -33,7 +33,7 @@
 
 
 
-        <section id="buttons">
+        <div id="buttons">
 
             <button class="choice" style="background-image: url(assets/image/rock.png); background-size: 80%;" id="rock"
                 data-type="Rock" aria-label="rock"></button>
@@ -45,20 +45,20 @@
                 id="lizard" data-type="Lizard" aria-label="lizard"></button>
             <button class="choice" style="background-image:url(assets/image/spock.png);background-size: 80%;" id="spock"
                 data-type="Spock" aria-label="spock"></button>
-        </section>
+        </div>
         <section id="label">
             <h3 id="user">User</h3>
             <h3 id="comp">Computer</h3>
         </section>
-        <section id="show">
+        <div id="show">
             <div id="showu"></div>
             <div id="showc"></div>
-        </section>
+        </div>
 
 
 
 
-    </section>
+    </div>
     <section id="form">
         <form action="https://8000-dimifabbrid-rockpapersc-t10aaclf03i.ws-eu47.gitpod.io/" method="GET" id="local">
             <h2>
@@ -78,7 +78,7 @@
 
 
     <div id="gameover">
-        <h4 id="finish">
+        <h4 id="finish">""
         </h4>
         <button id="btn" onclick="restart()">
             Restart ✌
