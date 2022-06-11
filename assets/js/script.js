@@ -3,7 +3,8 @@ let computerScore = 0;
 let movesLeft = 10;
 let time = 3;
 let tim = document.querySelector('.timer');
-let leaderboard = document.getElementsByClassName('left');
+let center = document.getElementById('center');
+
 let rules = document.getElementById('right');
 let moves = document.getElementById('moves');
 let img1 = document.getElementById('imgrules');
@@ -121,66 +122,16 @@ function game() {
             checkTie();
             timer();
 
-            function moveless() {
-                document.getElementById('moves').innerHTML = --movesLeft;
-                if (movesLeft === 0) {
-                    gameOver();
-                }
-            }
-
-            function gameOver() {
-                game1.style.display = 'none';
-                over.style.display = 'block'
-
-
-            };
-
-
-            function rounds() {
-                for (let button of buttons)
-                    button.addEventListener('click', function () {
-                        setTimeout(
-                            scissor.disabled = true,
-                            rock.disabled = true,
-                            lizard.disabled = true,
-                            spock.disabled = true,
-                            paper.disabled = true,
-                            3000)
-                    });
-
-                setTimeout(() => {
-                    scissor.removeAttribute('disabled'),
-                        rock.removeAttribute('disabled'),
-                        lizard.removeAttribute('disabled'),
-                        spock.removeAttribute('disabled'),
-                        paper.removeAttribute('disabled')
-                }, 3000)
-            }
-
 
 
         })
-    };
-
-    setInterval(timer, 1000);
-
-    function timer() {
-        tim.innerHTML = `Next move in ${time}`;
-        time--;
-        if (time === -1) {
-            tim.style.display = 'none';
-        }
     }
 
-    for (let button of buttons)
-        button.addEventListener('click', function () {
-            time = 3
-            tim.style.display = 'block';
-            timer();
-        })
-
-
-
+    function computerChoice() {
+        let choice = ['Rock', 'Scissor', 'Paper', 'Lizard', 'Spock'];
+        let randomChoice = Math.floor(Math.random() * 5);
+        return choice[randomChoice]
+    };
 
     function checkWinner() {
 
@@ -276,14 +227,68 @@ function game() {
             result.innerHTML = (`${userChoice} and ${computer} is a tie 😅 `)
         }
     }
+
+    function moveless() {
+        document.getElementById('moves').innerHTML = --movesLeft;
+        if (movesLeft === -1) {
+            gameOver();
+        }
+    }
+
+    function gameOver() {
+        game1.style.display = 'none';
+        over.style.display = 'block';
+        center.style.display = 'none';
+
+
+
+    };
+    for (let button of buttons)
+        button.addEventListener('click', function () {
+            time = 3
+            tim.style.display = 'block';
+            timer();
+        })
+
+    function rounds() {
+        for (let button of buttons)
+            button.addEventListener('click', function () {
+                setTimeout(
+                    scissor.disabled = true,
+                    rock.disabled = true,
+                    lizard.disabled = true,
+                    spock.disabled = true,
+                    paper.disabled = true,
+                    3000)
+            });
+
+        setTimeout(() => {
+            scissor.removeAttribute('disabled'),
+                rock.removeAttribute('disabled'),
+                lizard.removeAttribute('disabled'),
+                spock.removeAttribute('disabled'),
+                paper.removeAttribute('disabled')
+        }, 3000)
+    }
+
+
+
+}
+setInterval(timer, 1000);
+
+function timer() {
+    tim.innerHTML = `Next move in ${time}`;
+    time--;
+    if (time === -1) {
+        tim.style.display = 'none';
+    }
 }
 
 
-function computerChoice() {
-    let choice = ['Rock', 'Scissor', 'Paper', 'Lizard', 'Spock'];
-    let randomChoice = Math.floor(Math.random() * 5);
-    return choice[randomChoice]
-};
+
+
+
+
 
 function restart() {
     window.location.reload();

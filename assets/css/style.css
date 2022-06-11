@@ -24,15 +24,6 @@ h1 {
     background-color: #d3d9c9;
 }
 
-.left {
-    position: absolute;
-    left: 2rem;
-    bottom: 20px;
-    padding: 10px;
-    font-size: 1rem;
-    font-family: 'Inconsolata', monospace;
-    ;
-}
 
 #right {
     position: absolute;
@@ -44,7 +35,7 @@ h1 {
 }
 
 #center {
-    position: absolute;
+    float: left;
     display: flex;
     left: 40%;
     justify-content: space-evenly;
@@ -75,7 +66,7 @@ h1 {
 
 #label-left {
     position: absolute;
-    left: -85px;
+    left: -95px;
     bottom: -10px;
     border: 2px solid green;
     padding: 15px;
@@ -203,19 +194,27 @@ label {
 }
 
 #gameover {
+
     border: 2px solid black;
     padding: 100px;
-    text-align: center;
-    font-size: 50px;
+    width: 50%;
+    margin: 30px auto;
     display: none;
-    margin: 50px;
+}
+
+#finish {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
 }
 
 #btn {
-    font-size: 50px;
+    display: flex;
+    font-size: 30px;
+    margin: 0 auto;
 }
 
-@media screen and (max-width : 1353px) {
+@media screen and (max-width : 1350px) {
     #banner {
         height: 200px;
     }
@@ -236,16 +235,6 @@ label {
         font-size: 1.5rem;
         padding: 15px;
     }
-
-    #banner {
-        height: 170px;
-    }
-}
-
-@media screen and (max-width : 1024px) {
-    #banner {
-        height: 250px;
-    }
 }
 
 @media screen and (max-width : 492px) {
@@ -254,25 +243,23 @@ label {
         padding: 15px;
     }
 
-    #banner {
-        height: 170px;
-    }
-
     #scoreboard {
         width: 30%;
     }
-}
 
-@media screen and (max-width : 492px) {
-
-    #banner {
-        height: 200px;
+    #gameover {
+        padding: 70px;
     }
 }
 
+
+
+
+
+
 @media screen and (max-width : 386px) {
     #banner {
-        height: 350px;
+        height: 250px;
     }
 
     #center {
@@ -280,18 +267,5 @@ label {
         padding: 25px;
     }
 
-    #moves {
-        position: absolute;
-        top: 40px;
-    }
-}
 
-@media screen and (max-width : 338px) {
-
-    #moves {
-        position: absolute;
-        top: 60px;
-        left: 34px;
-
-    }
 }
