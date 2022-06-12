@@ -39,6 +39,22 @@ On the bottom 2 hide box are placed where, after the choice is made, the user ca
 
 The fourth feature is the display of the moves made from the players with a little description of the action that declare the winning of the losing of each choice with a clear description of how win this round.
 We can see the points updated for each round as descripted.
+As we can see also the moves remained they are updated every rounds. 
 The last feature of this section is the timer that beats the time of the game and the moves with a countdown, from the moment the buttons are disabled. 
 
 <img src = "assets/image/moves and timer with points.png" alt = "screnshoot of the game set with points update, timer beetween moves and description of the round with the choices made from the players ">
+<img src = "assets/image/moves left.png" alt = "moves left uptdated">
+
+## Choice display
+
+The fifth feature is the section with the hide boxes where the user and computer choice are displayed giving to the user an additional way to realize the opposed choice made and have a clear understanding of the rules after a couple of gasmes.
+
+<img src = "assets/image/choices displayed.png" alt = " choices that user and computer made">
+
+## Gameover
+
+The last feature is the game over interface where is swown a simple game over message and the winner of the game.
+
+To complete the game is present also a button with the user can restart the game and have a revenge if like in this case have lost or just challenge the fate and give to the computer another opportunity.
+
+<img src = "assets/image/gameover.png" alt = "game over interface displaying the winner and a restart button">
