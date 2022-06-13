@@ -57,7 +57,7 @@ The third feature is the game set where on the top the user can find his/her nam
 in the middle of the page we can find the possible choices for the user all responsive with a hover effect giving a more immersive sensation.
 On the bottom 2 hide box are placed where, after the choice is made, the user can compare his/her with the one took from the computer and have a complete undestanding round by round what is going on during the match. 
 
-<img src = "assets/image/game_set_with_name.png" alt = "game set with the scoreboard, the palyers of the game and the possible choice">
+<img src = "assets/image/game_set_with_name.png" alt = "game set with the scoreboard, the players of the game and the possible choice">
 
 ## Moves
 
@@ -66,7 +66,7 @@ We can see the points updated for each round as descripted.
 As we can see also the moves remained they are updated every rounds. 
 The last feature of this section is the timer that beats the time of the game and the moves with a countdown, from the moment the buttons are disabled. 
 
-<img src = "assets/image/moves_and:timer_with_points.png" alt = "screnshoot of the game set with points update, timer beetween moves and description of the round with the choices made from the players ">
+<img src = "assets/image/moves_and_timer_with_points.png" alt = "screnshoot of the game set with points update, timer beetween moves and description of the round with the choices made from the players ">
 <img src = "assets/image/moves_left.png" alt = "moves left uptdated">
 
 ## Choice display
