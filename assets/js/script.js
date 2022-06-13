@@ -248,7 +248,7 @@ function game() {
                     paper.disabled = true,
                     3000);
             });
-        };
+        }
 
         setTimeout(() => {
             scissor.removeAttribute('disabled'),
