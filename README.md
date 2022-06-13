@@ -7,6 +7,10 @@ In this site I wanted to show how to apply the logic rules behind rock,paper,sci
 
 <img src = 'assets/image/responsivness.morra.png' alt = "screenshot of the web page's responsivness"> </img>
 
+# Wireframe
+
+<img src = 'assets/image/wireframe.png' alt = "screenshot of the web page's wireframe"> </img>
+
 ## User Experience (UX)
 
 -   ### User stories
