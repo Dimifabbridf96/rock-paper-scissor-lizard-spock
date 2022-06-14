@@ -38,7 +38,7 @@ In this site I wanted to show how to apply the logic rules behind rock,paper,sci
 
 ## Pregame
 
-The first feature that the user see is the pregame form wher the user can put his name before start the actual game to give the chance to have a personalized experience. I wanted add a funny reference to The Big Bang Theory with a word that Sheldon says several time during the tv serie.
+The first feature that the user see is the pregame form where the user can put his name before start the actual game to give the chance to have a personalized experience. I wanted add a funny reference to The Big Bang Theory with a word that Sheldon says several time during the tv serie.
 
 
 <img src = "assets/image/pregame.png" alt = "pregame form">  <img src = "assets/image/pregame_with_name.png" alt = "pregame compiled">
@@ -93,7 +93,7 @@ To complete the game is present also a button with the user can restart the game
 ## Validator Testing
 
 * HTML
-    * Tested the code returning 0 errors https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-maths%2F#textarea
+    * Tested the code returning 0 errors https://validator.w3.org/nu/#textarea
 
 * CSS
     * Tested the code returning 0 errors https://jigsaw.w3.org/css-validator/validator
@@ -134,7 +134,7 @@ To complete the game is present also a button with the user can restart the game
 
 1. As a Returning Visitor, I want have the possibility to pass my spare time in a funny way with a challenging quick game. 
 
-    1. As shown, on the top of the page are displyed the moves remained, and from the moment the game is set to have maximum 10 moves before is over every match became a fast entertainment.
+    1. As shown, on the top of the page are displayed the moves remained, and from the moment the game is set to have maximum 10 moves before is over every match became a fast entertainment.
 
 
   #### Frequent User Goals
