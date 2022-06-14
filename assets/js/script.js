@@ -272,7 +272,6 @@ function gameOver() {
 
 for (let button of buttons)
     button.addEventListener('click', function () {
-
         tim.style.display = 'block';
         interval = setInterval(timer, 1000);
     });
@@ -310,9 +309,7 @@ setTimeout(() => {
 
 function timer() {
     tim.innerHTML = `Next move in ${time}`;
-    console.log('time', time);
     if (time === 0) {
-        console.log('clearInterval', time)
         clearInterval(interval);
         tim.style.display = 'none';
         time = 3;
