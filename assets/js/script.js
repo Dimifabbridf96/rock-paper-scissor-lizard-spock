@@ -21,17 +21,13 @@ let over = document.getElementById('gameover');
 let join = document.getElementById('join');
 let finish = document.querySelector('#finish');
 
-
+/** Game function is runned only after all the DOM is loaded */
 
 document.addEventListener("DOMContentLoaded", game());
 
-
+/** At first the main game interface is hide and the form is shown  */
 
 game1.style.display = 'none';
-
-
-
-
 
 
 join.addEventListener('click', function (event) {
@@ -42,7 +38,7 @@ join.addEventListener('click', function (event) {
     userName.innerHTML = x;
 });
 
-
+/** function that allow the user to see the rules of the game with a onmouse event */
 
 rules.onmouseover = function () {
     img1.style.display = 'block';
@@ -52,6 +48,9 @@ rules.onmouseover = function () {
 rules.onmouseout = function () {
     img1.style.display = 'none';
 };
+
+/**  Main function where is defined the players choices and the possibility to play a round having a random choice from the computer every time the user play a round showing in the bottom boxes both choices.
+ * Defined also, taking the score value on the scoreboard, the winner.  */
 
 function game() {
     let buttons = document.getElementsByTagName('button');
@@ -116,15 +115,22 @@ function game() {
         });
     }
 
+    /** Function that allow the computer to pick a random choice during the game */
+
     function computerChoice() {
         let choice = ['Rock', 'Scissor', 'Paper', 'Lizard', 'Spock'];
         let randomChoice = Math.floor(Math.random() * 5);
         return choice[randomChoice];
     }
 
+    /** Function that check if the user win and display on result field the outcome of the present round.
+     * This function update the user score adding a point every time the function run
+     */
+
     function checkWinner() {
 
-        /* check if user use rock*/
+        /* Check if user use rock*/
+
         if (userChoice === 'Rock' && computer === 'Scissor') {
             result.innerHTML = (`${userChoice} crushes ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
@@ -135,7 +141,8 @@ function game() {
             document.getElementById('u-score').innerHTML = ++uScore;
         }
 
-        /* if user use scissor*/
+        /* If user use scissor*/
+
         if (userChoice === 'Scissor' && computer === 'Paper') {
             result.innerHTML = (`${userChoice} cuts ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
@@ -144,7 +151,8 @@ function game() {
             document.getElementById('u-score').innerHTML = ++uScore;
 
         }
-        /*if user use paper*/
+        /*If user use paper*/
+
         if (userChoice === 'Paper' && computer === 'Rock') {
             result.innerHTML = (`${userChoice} covers ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
@@ -152,7 +160,8 @@ function game() {
             result.innerHTML = (`${userChoice} disproves ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
         }
-        /*if user use lizard */
+        /*If user use lizard */
+
         if (userChoice === 'Lizard' && computer === 'Spock') {
             result.innerHTML = (`${userChoice} poisons ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
@@ -161,7 +170,8 @@ function game() {
             result.innerHTML = (`${userChoice} eats ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
         }
-        /* if user use spock */
+        /* If user use spock */
+
         if (userChoice === 'Spock' && computer === 'Scissor') {
             result.innerHTML = (`${userChoice} smashes ${computer} 😁 ${fname.value} win 🎉`);
             document.getElementById('u-score').innerHTML = ++uScore;
@@ -172,7 +182,12 @@ function game() {
         }
     }
 
+    /** Function that check if the user lose and display on result field the outcome of the present round.
+     * This function update the computer score adding a point every time the function run */
+
     function checkLoser() {
+
+        /* Check if user use rock*/
 
         if (userChoice === 'Rock' && computer === 'Paper') {
             result.innerHTML = (`${computer} cover ${userChoice} 😞 computer win 😱`);
@@ -180,6 +195,9 @@ function game() {
         } else if (userChoice === 'Rock' && computer === 'Spock') {
             result.innerHTML = (`${computer} vaporizes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
+
+            /* If user use scissor*/
+
         } else if (userChoice === 'Scissor' && computer === 'Spock') {
             result.innerHTML = (`${computer} smashes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
@@ -187,6 +205,9 @@ function game() {
         if (userChoice === 'Scissor' && computer === 'Rock') {
             result.innerHTML = (`${computer} crushes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
+
+            /*If user use paper*/
+
         } else if (userChoice === 'Paper' && computer === 'Scissor') {
             result.innerHTML = (`${computer} cuts ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
@@ -194,6 +215,10 @@ function game() {
         if (userChoice === 'Paper' && computer === 'Lizard') {
             result.innerHTML = (`${computer} eats ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
+
+            /*If user use lizard */
+
+
         } else if (userChoice === 'Lizard' && computer === 'Rock') {
             result.innerHTML = (`${computer} crushes ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
@@ -201,6 +226,10 @@ function game() {
         if (userChoice === 'Lizard' && computer === 'Scissor') {
             result.innerHTML = (`${computer} decapitates ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
+
+            /* If user use spock */
+
+
         } else if (userChoice === 'Spock' && computer === 'Lizard') {
             result.innerHTML = (`${computer} poisones ${userChoice} 😞 computer win 😱`);
             document.getElementById('c-score').innerHTML = ++cScore;
@@ -211,11 +240,17 @@ function game() {
         }
     }
 
+    /** Function that run if the round is a tie  */
+
     function checkTie() {
         if (userChoice === computer) {
             result.innerHTML = (`${userChoice} and ${computer} is a tie 😅 `);
         }
     }
+
+    /** Function that subtract a move every round.
+     * When the moves reach -1 the gameover function run 
+     */
 
     function moveless() {
         moves.innerHTML = --movesLeft;
@@ -224,11 +259,15 @@ function game() {
         }
     }
 
+    /** Function that hide the main game interface, the moves left text and show the gameover interface */
+
     function gameOver() {
         game1.style.display = 'none';
         over.style.display = 'block';
         center.style.display = 'none';
     }
+
+    /** Function that show a timer that start from three everytime the user made a choice */
 
     for (let button of buttons)
         button.addEventListener('click', function () {
@@ -236,6 +275,8 @@ function game() {
             tim.style.display = 'block';
             timer();
         });
+
+    /** Function that disable the button between the rounds for 3 seconds */
 
     function rounds() {
         for (let button of buttons) {
@@ -250,6 +291,8 @@ function game() {
             });
         }
 
+        /** Function that remove the disabled attribute and allow the user to play the next round */
+
         setTimeout(() => {
             scissor.removeAttribute('disabled'),
                 rock.removeAttribute('disabled'),
@@ -259,10 +302,10 @@ function game() {
         }, 3000);
     }
 
-
-
 }
 setInterval(timer, 1000);
+
+/** Function that work over the timer shown the countdown */
 
 function timer() {
     tim.innerHTML = `Next move in ${time}`;
@@ -271,6 +314,9 @@ function timer() {
         tim.style.display = 'none';
     }
 }
+
+
+/** Function that allow the user to restart the game with the button on gameover interface */
 
 function restart() {
     window.location.reload();

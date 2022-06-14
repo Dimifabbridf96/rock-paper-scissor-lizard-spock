@@ -2,7 +2,7 @@
 
 This second project's web page is a funny game with some references to The Big Bang Theory from where I discovered for the first time this implementation of the traditional game. 
 
-In this site I wanted to show how to apply the logic rules behind rock,paper,scissor game using javascript giving to the user the possibility to plsy as many game they want having an opponent always ready, the computer, using a random choice funvtion, so unpredicable that make the game funnier.
+In this site I wanted to show how to apply the logic rules behind rock,paper,scissor game using javascript giving to the users the possibility to plsy as many game they want having an opponent always ready, the computer, using a random choice function, so unpredicable that make the game funnier.
 
 
 <img src = 'assets/image/responsivness.morra.png' alt = "screenshot of the web page's responsivness"> </img>
@@ -17,9 +17,9 @@ In this site I wanted to show how to apply the logic rules behind rock,paper,sci
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to find a simple interface to undestand leaving me just the worry to play and have fun
-        2. As a First Time Visitor, I want a personalized experience with the possibility of put my name as user label
-        3. As a First Time Visitor, I want understand with every moves how the game is going on.
+        1. As a First Time Visitor, I want to find a simple interface to undestand leaving me no worry than play and have fun
+        2. As a First Time Visitor, I want a personalized experience with the possibility to put my name as user label
+        3. As a First Time Visitor, I want understand with every moves ehat is going on in the game.
 
     -   #### Returning Visitor Goals
 
@@ -61,7 +61,7 @@ On the bottom 2 hide box are placed where, after the choice is made, the user ca
 
 ## Moves
 
-The fourth feature is the display of the moves made from the players with a little description of the action that declare the winning of the losing of each choice with a clear description of how win this round.
+The fourth feature is the display of the moves made from the players with a little description of the action that declare the winning of the losing of each choice with a clear description of who win this round.
 We can see the points updated for each round as descripted.
 As we can see also the moves remained they are updated every rounds. 
 The last feature of this section is the timer that beats the time of the game and the moves with a countdown, from the moment the buttons are disabled. 
@@ -71,15 +71,15 @@ The last feature of this section is the timer that beats the time of the game an
 
 ## Choice display
 
-The fifth feature is the section with the hide boxes where the user and computer choice are displayed giving to the user an additional way to realize the opposed choice made and have a clear understanding of the rules after a couple of gasmes.
+The fifth feature is the section with the hide boxes where the user and computer choice are displayed giving to the user an additional way to realize the opposed choice made and have a clear understanding of the rules after a couple of games.
 
 <img src = "assets/image/choices_displayed.png" alt = " choices that user and computer made">
 
 ## Gameover
 
-The last feature is the game over interface where is swown a simple game over message and the winner of the game.
+The last feature is the game over interface where is shown a simple game over message and the winner of the game.
 
-To complete the game is present also a button with the user can restart the game and have a revenge if like in this case have lost or just challenge the fate and give to the computer another opportunity.
+To complete the game is present also a button with the user can restart the game and have a revenge if, like in this case, have lost or just challenge the fate and give to the computer another opportunity.
 
 <img src = "assets/image/gameover.png" alt = "game over interface displaying the winner and a restart button">
 
@@ -120,15 +120,15 @@ To complete the game is present also a button with the user can restart the game
 1. As a First Time Visitor, I want to find a simple interface to undestand leaving me just the worry to play and have fun
 
     1. The user is welcome in the site with a simple form to compile.
-    2. As soon the form is compiled and the game start and the user can easily start to play and have fun
+    2. As soon the form is compiled and the game start the user can easily start to play and have fun
 
- 2. As a First Time Visitor, I want a personalized experience with the possibility of put my name as user label
+ 2. As a First Time Visitor, I want a personalized experience with the possibility to put my name as user label
 
     1. The pregame form is use to get the first name of the user and give a more immersive experience.
 
  3. As a First Time Visitor, I want understand with every moves how the game is going on.
 
-    1. Whenever the user make a choice the interface that see explain in 3 different ways the winner and the choices made from each player, with a text message, updated score and images that pop up on the bottom of the page
+    1. Whenever the user make a choice the interface displayed explain in 3 different ways the winner and the choices made from each player, with a text message, updated score and images that pop up on the bottom of the page
 
 -   #### Returning Visitor Goals
 
