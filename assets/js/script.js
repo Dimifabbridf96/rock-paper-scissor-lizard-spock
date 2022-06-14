@@ -20,12 +20,12 @@ let game1 = document.getElementById('game');
 let over = document.getElementById('gameover');
 let join = document.getElementById('join');
 let finish = document.querySelector('#finish');
+let interval = null
 
-/** Game function is runned only after all the DOM is loaded */
 
 document.addEventListener("DOMContentLoaded", game());
 
-/** At first the main game interface is hide and the form is shown  */
+
 
 game1.style.display = 'none';
 
@@ -36,9 +36,11 @@ join.addEventListener('click', function (event) {
     form.style.display = 'none';
     var x = fname.value;
     userName.innerHTML = x;
+    if (x === "") {
+        userName.innerHTML = 'User';
+    }
 });
 
-/** function that allow the user to see the rules of the game with a onmouse event */
 
 rules.onmouseover = function () {
     img1.style.display = 'block';
@@ -271,9 +273,9 @@ function game() {
 
     for (let button of buttons)
         button.addEventListener('click', function () {
-            time = 3;
+
             tim.style.display = 'block';
-            timer();
+            interval = setInterval(timer, 1000);
         });
 
     /** Function that disable the button between the rounds for 3 seconds */
@@ -303,15 +305,20 @@ function game() {
     }
 
 }
-setInterval(timer, 1000);
+
 
 /** Function that work over the timer shown the countdown */
 
 function timer() {
     tim.innerHTML = `Next move in ${time}`;
-    time--;
-    if (time === -1) {
+    console.log('time', time);
+    if (time === 0) {
+        console.log('clearInterval', time)
+        clearInterval(interval);
         tim.style.display = 'none';
+        time = 3;
+    } else {
+        time--;
     }
 }
 
